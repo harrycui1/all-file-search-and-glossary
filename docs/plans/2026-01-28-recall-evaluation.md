@@ -194,7 +194,7 @@ GROUND_TRUTH = [
 
 **Step 2: Verify the file compiles**
 
-Run: `cd /Users/haowei/Downloads/Code/ALL_Search && GEMINI_API_KEY="AIzaSyALUa-Wq4JqxYgMx7qiqZM3mL1Vo-GrGik" python3.10 -c "from evaluate import GROUND_TRUTH; print(f'{len(GROUND_TRUTH)} test cases loaded')"`
+Run: `cd /Users/haowei/Downloads/Code/ALL_Search && GEMINI_API_KEY="YOUR_GEMINI_API_KEY" python3.10 -c "from evaluate import GROUND_TRUTH; print(f'{len(GROUND_TRUTH)} test cases loaded')"`
 Expected: `25 test cases loaded`
 
 **Step 3: Commit**
@@ -341,7 +341,7 @@ def evaluate_query(client, store_name, test_case) -> QueryResult:
 
 **Step 2: Verify it compiles**
 
-Run: `cd /Users/haowei/Downloads/Code/ALL_Search && GEMINI_API_KEY="AIzaSyALUa-Wq4JqxYgMx7qiqZM3mL1Vo-GrGik" python3.10 -c "from evaluate import QueryResult, evaluate_query; print('OK')"`
+Run: `cd /Users/haowei/Downloads/Code/ALL_Search && GEMINI_API_KEY="YOUR_GEMINI_API_KEY" python3.10 -c "from evaluate import QueryResult, evaluate_query; print('OK')"`
 Expected: `OK`
 
 **Step 3: Commit**
@@ -509,12 +509,12 @@ if __name__ == "__main__":
 
 **Step 2: Smoke test with 2 queries**
 
-Run: `cd /Users/haowei/Downloads/Code/ALL_Search && GEMINI_API_KEY="AIzaSyALUa-Wq4JqxYgMx7qiqZM3mL1Vo-GrGik" python3.10 evaluate.py --limit 2`
+Run: `cd /Users/haowei/Downloads/Code/ALL_Search && GEMINI_API_KEY="YOUR_GEMINI_API_KEY" python3.10 evaluate.py --limit 2`
 Expected: Runs 2 queries, prints recall/precision per query and aggregate report. No crashes.
 
 **Step 3: Full run with all 25 queries**
 
-Run: `cd /Users/haowei/Downloads/Code/ALL_Search && GEMINI_API_KEY="AIzaSyALUa-Wq4JqxYgMx7qiqZM3mL1Vo-GrGik" python3.10 evaluate.py --save-json`
+Run: `cd /Users/haowei/Downloads/Code/ALL_Search && GEMINI_API_KEY="YOUR_GEMINI_API_KEY" python3.10 evaluate.py --save-json`
 Expected: Runs all 25 queries, prints full report with aggregate metrics and recommendation.
 
 **Step 4: Commit**
@@ -555,7 +555,7 @@ git commit -m "docs: add recall evaluation results to technical doc"
 ## Execution Notes
 
 - All commands use `python3.10` (not `python`) per the project's Python version requirement
-- API key is passed via environment variable: `GEMINI_API_KEY="AIzaSyALUa-Wq4JqxYgMx7qiqZM3mL1Vo-GrGik"`
+- API key is passed via environment variable: `GEMINI_API_KEY="YOUR_GEMINI_API_KEY"`
 - The existing store `fileSearchStores/kangyurvinayapoc-yqdrpsujqcve` already has 16 Vinaya files uploaded
 - Rate limiting: 2 second delay between queries by default to avoid API rate limits
 - The `--limit` flag allows quick smoke testing with fewer queries

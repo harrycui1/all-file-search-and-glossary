@@ -65,14 +65,14 @@ pip3.10 install google-genai>=1.60.0
 
 | 项目 | 值 |
 |------|-----|
-| API Key | `AIzaSyALUa-Wq4JqxYgMx7qiqZM3mL1Vo-GrGik` |
+| API Key | `YOUR_GEMINI_API_KEY` |
 | 查询模型 | `gemini-3-pro-preview`（在 `config.py` 中配置） |
 | API 文档 | https://ai.google.dev/gemini-api/docs/file-search |
 
 API Key 通过环境变量传入：
 
 ```bash
-export GEMINI_API_KEY="AIzaSyALUa-Wq4JqxYgMx7qiqZM3mL1Vo-GrGik"
+export GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
 ```
 
 ### File Search Store（已创建）
@@ -229,7 +229,7 @@ Query> cat:Vinaya What are the rules about eating?
 cd /Users/haowei/Downloads/Code/ALL_Search
 
 # 设置 API Key
-export GEMINI_API_KEY="AIzaSyALUa-Wq4JqxYgMx7qiqZM3mL1Vo-GrGik"
+export GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
 
 # 使用已有的 POC store 直接搜索
 python3.10 search.py --store-name fileSearchStores/kangyurvinayapoc-yqdrpsujqcve -q "What are the four defeats?"
