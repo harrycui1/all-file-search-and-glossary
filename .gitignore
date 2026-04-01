@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Data (too large for git — see README for setup instructions)
+KANGYUR*/
+EPUB/
+
+# System / editor
+.DS_Store
+.claude/
+
+# Secrets
+.env
+
+# Evaluation output
+evaluation_results.json
+
+# Store reference (local state)
+.store_name.json
